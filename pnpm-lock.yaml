@@ -141,6 +141,9 @@ importers:
       stylus:
         specifier: ^0.63.0
         version: 0.63.0
+      vite-plugin-abbrlink:
+        specifier: ^1.0.1
+        version: 1.0.1(abbrlink@1.0.1(buffer@6.0.3))(vite@5.1.6(@types/node@20.11.28)(lightningcss@1.24.1)(stylus@0.63.0)(terser@5.29.2))
 
 packages:
 
@@ -1757,6 +1760,10 @@ packages:
   '@vscode/l10n@0.0.18':
     resolution: {integrity: sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==}
 
+  abbrlink@1.0.1:
+    resolution: {integrity: sha512-xROSHWPymWwkD4ibo6FuIleVdwGb5u7J194vE/CElh1Iclz/g00jOmAWyU7syb+Y32lDVAQR4MsayvopLti5OA==}
+    engines: {node: ^16.0.0}
+
   acorn@8.11.3:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
     engines: {node: '>=0.4.0'}
@@ -2146,6 +2153,15 @@ packages:
   cosmiconfig@7.1.0:
     resolution: {integrity: sha512-AdmX6xUzdNASswsFtmwSt7Vj8po9IuqXm0UXz7QKPuEUmPB4XyjGfaAr2PSuELMwkRMVH1EpIkX5bTZGRB3eCA==}
     engines: {node: '>=10'}
+
+  crc@4.3.2:
+    resolution: {integrity: sha512-uGDHf4KLLh2zsHa8D8hIQ1H/HtFQhyHrc0uhHBcoKGol/Xnb+MPYfUMw7cvON6ze/GUESTudKayDcJC5HnJv1A==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      buffer: '>=6.0.3'
+    peerDependenciesMeta:
+      buffer:
+        optional: true
 
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
@@ -4699,6 +4715,13 @@ packages:
   vfile@6.0.1:
     resolution: {integrity: sha512-1bYqc7pt6NIADBJ98UiG0Bn/CHIVOoZ/IyEkqIruLg0mE1BKzkOXY2D6CSqQIcKqgadppE5lrxgWXJmXd7zZJw==}
 
+  vite-plugin-abbrlink@1.0.1:
+    resolution: {integrity: sha512-B636PEb+V0a/k/Toxx+0e5fzAvw3BG1qTX5vJz8Ps5RHpNbq6zT0nNLr+tDPbpaVqUW0GCrQYGwnVus86il9tQ==}
+    engines: {node: ^16.0.0}
+    peerDependencies:
+      abbrlink: 1.0.1
+      vite: ^5.2.11
+
   vite@5.1.6:
     resolution: {integrity: sha512-yYIAZs9nVfRJ/AiOLCA91zzhjsHUgMjB+EigzFb6W2XTLO8JixBCKCjvhKZaye+NKYHCrkv3Oh50dH9EdLU2RA==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -6662,6 +6685,15 @@ snapshots:
 
   '@vscode/l10n@0.0.18': {}
 
+  abbrlink@1.0.1(buffer@6.0.3):
+    dependencies:
+      chokidar: 3.6.0
+      crc: 4.3.2(buffer@6.0.3)
+      fast-glob: 3.3.2
+      gray-matter: 4.0.3
+    transitivePeerDependencies:
+      - buffer
+
   acorn@8.11.3: {}
 
   ansi-align@3.0.1:
@@ -7173,6 +7205,10 @@ snapshots:
       parse-json: 5.2.0
       path-type: 4.0.0
       yaml: 1.10.2
+
+  crc@4.3.2(buffer@6.0.3):
+    optionalDependencies:
+      buffer: 6.0.3
 
   cross-spawn@7.0.3:
     dependencies:
@@ -10399,6 +10435,11 @@ snapshots:
       '@types/unist': 3.0.2
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
+
+  vite-plugin-abbrlink@1.0.1(abbrlink@1.0.1(buffer@6.0.3))(vite@5.1.6(@types/node@20.11.28)(lightningcss@1.24.1)(stylus@0.63.0)(terser@5.29.2)):
+    dependencies:
+      abbrlink: 1.0.1(buffer@6.0.3)
+      vite: 5.1.6(@types/node@20.11.28)(lightningcss@1.24.1)(stylus@0.63.0)(terser@5.29.2)
 
   vite@5.1.6(@types/node@20.11.28)(lightningcss@1.24.1)(stylus@0.63.0)(terser@5.29.2):
     dependencies:

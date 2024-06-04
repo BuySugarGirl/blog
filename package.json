@@ -58,6 +58,7 @@
     "@types/markdown-it": "^14.0.0",
     "@types/mdast": "^4.0.3",
     "@types/sanitize-html": "^2.11.0",
-    "stylus": "^0.63.0"
+    "stylus": "^0.63.0",
+    "vite-plugin-abbrlink": "^1.0.1"
   }
 }

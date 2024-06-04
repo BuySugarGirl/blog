@@ -16,7 +16,8 @@ import rehypeComponents from "rehype-components"; /* Render the custom directive
 import svelte from "@astrojs/svelte"
 import swup from '@swup/astro';
 import sitemap from '@astrojs/sitemap';
-import {parseDirectiveNode} from "./src/plugins/remark-directive-rehype.js";
+import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
+import vitePluginAbbrLink from "vite-plugin-abbrlink"
 
 const oklchToHex = (str) => {
   const DEFAULT_HUE = 250
@@ -100,6 +101,9 @@ export default defineConfig({
     ],
   },
   vite: {
+    plugins: [vitePluginAbbrLink({
+      paths:['src/content/**/*.md'],
+    })],
     build: {
       rollupOptions: {
         onwarn(warning, warn) {
@@ -110,6 +114,7 @@ export default defineConfig({
           warn(warning);
         }
       }
+      
     },
     css: {
       preprocessorOptions: {
