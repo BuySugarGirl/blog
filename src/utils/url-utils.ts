@@ -14,20 +14,20 @@ function joinUrl(...parts: string[]): string {
 
 export function getPostUrlBySlug(slug: string): string | null {
   if (!slug) return null
-  return url(`/posts/${slug}/`)
+  return url(`/posts/${slug}`)
 }
 
 export function getCategoryUrl(category: string): string | null {
   if (!category) return null
   if (category === i18n(i18nKey.uncategorized))
-    return url('/archive/category/uncategorized/')
-  return url(`/archive/category/${category}/`)
+    return url('/archive/category/uncategorized')
+  return url(`/archive/category/${category}`)
 }
 
 export function getDir(path: string): string {
   const lastSlashIndex = path.lastIndexOf('/')
   if (lastSlashIndex < 0) {
-    return '/'
+    return ''
   }
   return path.substring(0, lastSlashIndex + 1)
 }
