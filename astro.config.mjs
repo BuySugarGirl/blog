@@ -33,6 +33,7 @@ const oklchToHex = str => {
 export default defineConfig({
   site: 'https://self.tangerball.com/',
   base: '/',
+  trailingSlash: 'never',
   integrations: [
     tailwind(),
     swup({

@@ -12,8 +12,8 @@ function joinUrl(...parts: string[]): string {
   return joined.replace(/\/+/g, '/')
 }
 
-export function getPostUrlBySlug(slug: string): string | null {
-  if (!slug) return null
+export function getPostUrlBySlug(slug: string): string | undefined {
+  if (!slug) return undefined
   return url(`/posts/${slug}`)
 }
 
