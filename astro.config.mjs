@@ -34,6 +34,9 @@ export default defineConfig({
   site: 'https://self.tangerball.com/',
   base: '/',
   trailingSlash: 'never',
+  server: {
+    open: true,
+  },
   integrations: [
     tailwind(),
     swup({
@@ -111,7 +114,7 @@ export default defineConfig({
   vite: {
     plugins: [
       vitePluginAbbrLink({
-        paths: ['src/content/**/*.md'],
+        paths: ['src/content/posts/**/*.md'],
       }),
     ],
     build: {
