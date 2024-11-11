@@ -31,9 +31,9 @@ const oklchToHex = str => {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://self.tangerball.com/',
+  site: 'http://buysugargirl.cn/',
   base: '/',
-  trailingSlash: 'never',
+  trailingSlash: 'always',
   server: {
     open: true,
   },
